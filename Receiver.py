@@ -19,3 +19,7 @@ class Receiver:
 
     def remove(self, sock):
         self.input_socks.remove(sock)
+
+
+    def socket_let_go(self, sock):
+        self.input_socks.add(sock)
