@@ -10,7 +10,7 @@ class Receiver:
             for sock in self.input_socks:
                 input_ = sock.recv()
                 if input_:
-                    self.output_queue.put((sock, input_))
+                    self.output_queue.put((input_, sock))
 
 
     def return_socket(self, sock):
